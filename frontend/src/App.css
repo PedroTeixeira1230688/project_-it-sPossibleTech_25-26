@@ -1,0 +1,128 @@
+:root {
+    --primary: #4f46e5;      /* Azul */
+    --success: #10b981;      /* Verde */
+    --warning: #f59e0b;      /* Laranja */
+    --danger: #ef4444;       /* Vermelho */
+    --bg: #f3f4f6;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.todo-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus { border-color: var(--primary); }
+
+/* Estilo Base dos Botões */
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s, filter 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.add-btn {
+    background: var(--primary);
+    color: white;
+}
+
+/* Lista de Tarefas */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #f9fafb;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.task-title {
+    font-size: 1rem;
+    color: #374151;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Botão Concluir */
+.btn-complete {
+    background-color: var(--success);
+    color: white;
+    font-size: 0.8rem;
+}
+
+/* Botão Reabrir */
+.btn-undo {
+    background-color: var(--warning);
+    color: white;
+    font-size: 0.8rem;
+}
+
+/* Botão Eliminar */
+.delete-btn {
+    background-color: var(--danger);
+    color: white;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+/* Estado Concluído */
+.completed {
+    background-color: #f3f4f6;
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.empty { text-align: center; color: #9ca3af; }
